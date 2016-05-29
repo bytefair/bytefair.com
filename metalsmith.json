@@ -2,25 +2,35 @@
   "source": "src/content",
   "destination": "dist",
   "clean": false,
-  "metadata": {
-    "title": "Byte Fair",
-    "tagline": "Artisanal Codemongers"
-  },
   "plugins": {
+    "metalsmith-drafts": true,
     "metalsmith-markdownit": {
       "typographer": true,
       "html": true
     },
     "metalsmith-permalinks": {
-      "pattern": ":date/:title",
-      "date": "YYYY",
-      "relative": false
+      "linksets": [{
+        "match": { "collection": "articles" },
+        "pattern": ":title"
+      },{
+        "match": { "collection": "projects" },
+        "pattern": ":title"
+      }]
+    },
+    "metalsmith-collections": {
+      "articles": {
+        "sortBy": "date",
+        "reverse": true
+      },
+      "projects": {
+        "sortBy": "title"
+      }
     },
     "metalsmith-layouts": {
       "directory": "src/templates/layouts",
       "default": "default.hbs",
       "engine": "handlebars",
-      "partials": "src/views/partials",
+      "partials": "src/templates/partials",
       "rename": true
     },
     "metalsmith-ignore": [
