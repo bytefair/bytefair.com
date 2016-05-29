@@ -1,0 +1,31 @@
+{
+  "source": "src/content",
+  "destination": "dist",
+  "clean": false,
+  "metadata": {
+    "title": "Byte Fair",
+    "tagline": "Artisanal Codemongers"
+  },
+  "plugins": {
+    "metalsmith-markdownit": {
+      "typographer": true,
+      "html": true
+    },
+    "metalsmith-permalinks": {
+      "pattern": ":date/:title",
+      "date": "YYYY",
+      "relative": false
+    },
+    "metalsmith-layouts": {
+      "directory": "src/templates/layouts",
+      "default": "default.hbs",
+      "engine": "handlebars",
+      "partials": "src/views/partials",
+      "rename": true
+    },
+    "metalsmith-ignore": [
+      "**/*.css",
+      "**/*.js"
+    ]
+  }
+}
