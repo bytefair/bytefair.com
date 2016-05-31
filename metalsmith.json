@@ -26,6 +26,9 @@
         "sortBy": "title"
       }
     },
+    "metalsmith-register-helpers": {
+      "directory": "src/scripts/helpers"
+    },
     "metalsmith-layouts": {
       "directory": "src/templates/layouts",
       "default": "default.hbs",
