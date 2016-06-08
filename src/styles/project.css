@@ -1,0 +1,5 @@
+.project-work {
+  & span:not(:last-of-type)::after {
+    content: ',';
+  }
+}

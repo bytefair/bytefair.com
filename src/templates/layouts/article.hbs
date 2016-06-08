@@ -1,0 +1,12 @@
+{{>header}}
+  <article>
+    <header>
+      <h1>{{title}}</h1>
+      <p class="project-work">
+        <strong>work:</strong> {{#each work}}<span>{{this}}</span> {{/each}}
+      </p>
+      </ul>
+    </header>
+    {{{contents}}}
+  </article>
+{{>footer}}

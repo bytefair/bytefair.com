@@ -1,3 +1,7 @@
 {{>header}}
-
+  <ul>
+    {{#each projects}}
+      <li><a href="/{{path}}">{{title}}</a></li>
+    {{/each}}
+  </ul>
 {{>footer}}

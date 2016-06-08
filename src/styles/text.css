@@ -46,3 +46,13 @@ h6 {
   font-size: var(--text-h6, 0.75rem);
   margin: 1.67em 0;
 }
+
+p {
+  margin-top: 1.5em;
+}
+
+:any-link {
+  text-decoration: underline;
+  font-weight: bold;
+  color: red;
+}

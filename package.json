@@ -53,7 +53,7 @@
     "styles:compile": "postcss --use postcss-import --use postcss-nesting --use postcss-cssnext --use postcss-pxtorem --use postcss-em-media-query --map --config postcss.json --output dist/bundle.css src/styles/entry.css",
     "styles:lint": "stylelint styles/**/*.css",
     "styles:min": "postcss --use cssnano --replace dist/bundle.css",
-    "serve": "browser-sync start --server --serveStatic dist --files '**/*'",
+    "serve": "browser-sync start --server --serveStatic dist --files 'dist/**/*'",
     "static": "copyfiles src/static/**/* dist",
     "templates:compile": "metalsmith",
     "watch:js": "watchify src/scripts/entry.js --debug --verbose --transform [ babelify --presets [ es2015 ] ] --outfile dist/bundle.js",
